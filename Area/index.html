@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance LTD</title>
+
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+
+        .wrapper {
+            display: flex;
+            width: 100%;
+            margin: 0 auto;
+            background: #FFFFFF;
+            box-shadow: 3px 0px 20px 0px #0000000A;
+            padding: 20px;
+            align-items: center;
+            vertical-align: text-bottom;
+        }
+
+        .logo img {
+            display: flex;
+            margin-right: 100px;
+            padding: 0 30px;
+        }
+
+        .textbox {
+            align-items: center;
+            margin-left: ;
+            display: flex;
+
+        }
+
+        .textbox1 {
+            font-family: arial;
+            height: 40px;
+            border-radius: 10px;
+            background: #FFFFFF;
+            border: 0.5px solid#ccc
+        }
+
+        /* input{
+            min-width: 320px;
+            padding: 0.5rem 1rem;
+            line-height: 2;
+            font: inherit;
+            border: 0px solid;
+            border-radius: 0.25rem;
+
+        } */
+        .document {
+            float: right;
+            margin-left: 15%;
+            margin-right: 5%;
+            color: #213F7D;
+            text-decoration: underline;
+            font-family: arial;
+            align-items: center;
+        }
+
+        .bell {
+            display: flex;
+            column-gap: 30px;
+        }
+
+        .notify {
+            padding: 10%;
+        }
+
+        .profile {
+            border-radius: 60%;
+        }
+
+        p {
+            margin-left: 10px;
+            display: flex;
+        }
+
+        .pa {
+            color: #213F7D;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 200px;
+            background: #FFFFFF;
+            height: 800px;
+            box-shadow: 0px 5px 20px 0px #0000000A;
+            margin-left:0 ;
+             
+        }
+
+        nav {
+            padding: 4px;
+            display: inline-flex;
+
+        }
+
+        nav ul {
+            display: grid;
+            color: #213F7D;
+        }
+
+        nav ul li {
+            list-style: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            letter-spacing: 0px;
+            color: #213F7D;
+           
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+
+        }
+
+        nav ul li img {
+            vertical-align: text-bottom;
+            margin-right: 5px;
+        }
+
+        li+li {
+            margin-bottom: 12px;
+        }
+
+        a:hover {
+            color: #ccc;
+        }
+
+        .stats {
+            display: inline-flex;
+            gap: 20px;
+            margin-top: 10px;
+            color: #545f7d;
+            flex-wrap: nowrap;
+            position: relative;
+
+        }
+
+        .stat-card1 {
+            background: #fff;
+            padding: 3cqh;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 180px;
+            position: absolute;
+            top: 170px;
+            left: 200px;
+            margin-left: 70px;
+
+        }
+
+        .stat-card2 {
+            background: #fff;
+            padding: 3cqh;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 180px;
+            position: absolute;
+            top: 170px;
+            left: 400px;
+            margin-left: 100px;
+
+        }
+
+        .stat-card3 {
+            background: #fff;
+            padding: 3cqh;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 180px;
+            position: absolute;
+            top: 170px;
+            left: 600px;
+            margin-left: 135px;
+            height: 125px;
+        }
+
+        .stat-card4 {
+            background: #fff;
+            padding: 3cqh;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 180px;
+            position: absolute;
+            top: 171px;
+            left: 800px;
+            margin-left: 170px;
+        }
+
+        .stat-card1 h3 {
+            font-weight: lighter;
+            color: #545F7D;
+        }
+
+        .stat-card2 h3 {
+            font-weight: lighter;
+            color: #545F7D;
+        }
+
+        .stat-card3 h3 {
+            font-weight: lighter;
+            color: #545F7D;
+        }
+
+        .stat-card4 h4 {
+            font-weight: lighter;
+            color: #545F7D;
+
+        }
+
+        .stat p {
+            font-weight: bolder;
+            color: #213F7D;
+
+        }
+
+        div .stat-card1 p img {
+            border: 1px;
+            background: #e48ec6;
+            border-radius: 50%;
+            opacity: 100%;
+            box-shadow: #ccc;
+            /* justify-items: center; */
+        }
+
+        div .stat-card2 p img {
+            border: 1px;
+            background: #9c92b7bf;
+            border-radius: 50%;
+            opacity: 100%;
+            box-shadow: #ccc;
+        }
+
+        div .stat-card3 p img {
+            border: 1px;
+            background: #742315;
+            border-radius: 50%;
+            opacity: 100%;
+            box-shadow: #ccc;
+        }
+
+        div .stat-card4 p img {
+            border: 1px;
+            background: #f1a1b5;
+            border-radius: 50%;
+            opacity: 100%;
+            box-shadow: #ccc;
+
+        }
+
+        table {
+            position: absolute;
+            left: 40cqh;
+            top: 55cqh;
+            /* border: 1px solid; */
+            box-shadow: #ccc;
+            table-layout: auto;
+            width: 67%;
+            border-collapse: collapse;
+            background-color: #FFFFFF;
+            box-shadow: 3px 5px 20px 0px #0000000A;
+            overflow-wrap: normal;
+            
+
+
+        }
+
+        table tr td {
+            font-family: arial;
+            font-size: 12px;
+            color: #545F7D;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            
+
+        }
+
+        table tr th {
+            justify-content: center;
+            font-size: 12px;
+            color: #3a4b80;
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table tr th img {
+            vertical-align: middle; 
+            
+            column-gap: 10px;
+        }
+
+        .decade {
+            position: absolute;
+            left: 500cqh;
+            top: 20cqh;
+
+        }
+
+        .active {
+            background-color: rgb(154, 237, 154);
+            color: #fff;
+            border-radius: 10px;
+            border: none;
+            width: 80px;
+            height: 20px;
+        }
+
+        .pending {
+            background-color: rgb(245, 245, 138);
+            color: #ccc;
+            border-radius: 10px;
+            border: none;
+            width: 80px;
+            height: 20px;
+
+        }
+        .blacklisted{
+            background-color: rgb(6, 6, 162);
+            color: #ccc;
+            border-radius: 10px;
+            border: none;
+            width: 80px;
+            height: 20px;
+
+        }
+        .inactive{
+            background-color: ;
+            color: #ccc;
+            border-radius: 10px;
+            border: none;
+            width: 80px;
+            height: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="./logo.png" alt="">
+        </div>
+        <div class="textbox">
+            <form action="">
+                <input class="textbox1" type="search" id="serachbox" size="50px" placeholder="Search for anyting...">
+                <!-- <button class="serach"><img class="serachicon" src="./searchicon (2).png" alt=""></button> -->
+            </form>
+        </div>
+        <a class="document" href="#">DOC</a>
+        <div class="bell">
+            <div>
+                <img class="notify" src="./gala--bell.png" alt="">
+            </div>
+            <div>
+                <img class="profile" src="./image 4.png" alt="">
+            </div>
+        </div>
+        <div class="pa">
+            <div>
+                <p>Adedeji</p>
+            </div>
+            <div>
+                <p>&#x25BC;</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <aside>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#"><img src="./briefcase 1.png" alt="">Switch organisation</a></li>
+                    <br>
+                    <br>
+                    <li><a href="#"><img src="./home 1.png" alt="">Dashboard</a></li>
+                    <br>
+                    <li>COSTUMERS</li>
+                    <li><a href="#"><img src="./Users 2.png" alt="">users</a></li>
+                    <li><a href="#"><img src="./users 3.png" alt="">Guarantors</a></li>
+                    <li><a href="#"><img src="./money.png" alt="">Loans</a></li>
+                    <li><a href="#"><img src="./handshake-regular 1.png" alt="">Decison Model</a></li>
+                    <li><a href="#"><img src="./piggy-bank 1.png" alt="">Savings</a></li>
+                    <li><a href="#"><img src="./hand money.png" alt="">Loan Requests</a></li>
+                    <li><a href="#"><img src="./whitelist.png" alt="">Whitelis</a>t</li>
+                    <li><a href="#"><img src="./karma.png" alt="">Karma</a></li>
+                    <li> BUSINESSES</li>
+                    <li><a href="#"><img src="./briefcase 1.png" alt="">Organisation</a></li>
+                    <li><a href="#"><img src="./hand money.png" alt="">Loan Products</a></li>
+                    <li><a href="#"><img src="./np_bank.png" alt="">Savings Products</a></li>
+                    <li><a href="#"><img src="./coins-solid 1.png" alt="">Fees and Charges</a></li>
+                    <li><a href="#"><img src="./icon.png" alt="">Transactions</a></li>
+                    <li><a href="#"><img src="./service.png" alt="">Service</a></li>
+                    <li><a href="#"><img src="./person settting.png" alt="">Service Account</a></li>
+                    <li><a href="#"><img src="./scroll 1.png" alt="">Settlements</a></li>
+                    <li><a href="#"><img src="./chart-bar 2.png" alt="">Reports</a></li>
+                    <li>SETTINGS</li>
+                    <li><a href="#"><img src="./sliders-h 1.png" alt="">Preferences</a></li>
+                    <li><a href="#"><img src="./badge-percent 1.png" alt="">Fees and Pricings</a></li>
+                    <li><a href="#"><img src="./clipboard-list 1.png" alt="">Audit Logs</a></li>
+
+                </ul>
+            </nav>
+        </aside>
+    </div>
+
+
+
+    <div class="stat">
+        <div class="stat-card1">
+            <p><img src="./np_users 1.png" alt=""></p>
+            <h3>USERS</h3>
+            <p>2,453</p>
+        </div>
+        <div class="stat-card2">
+
+            <p><img src="./np_users.png" alt=""></p>
+            <h3>ACTIVE LOAN</h3>
+            <p>2,453</p>
+        </div>
+        <div class="stat-card3">
+            <p><img src="./np_loan.png" alt="">
+            <p>
+            <h3>USERS WlTH LOANS</h3>
+            <p>12,453</p>
+        </div>
+        <div class="stat-card4">
+            <p><img src="./fees&.png" alt=""></p>
+            <h4>USERS WlTH SAVINGS</h4>
+            <p id="font1">102,453</p>
+        </div>
+
+        </section>
+
+        <div class="top">
+            <table class="info" cellpadding="8px">
+                <tr>
+                    <th>ORGANIZATIONi <img src="./filter-results-button.png" alt=""></th>
+                    <th>USERNAME <img src="./filter-results-button.png" alt=""></th>
+                    <th>EMAIL<img src="./filter-results-button.png" alt=""></th>
+                    <th>PHONE NUMBER <img src="./filter-results-button.png" alt=""></th>
+                    <th>DATE JOINED <img src="./filter-results-button.png" alt=""></th>
+                    <th>STATUS<img src="./filter-results-button.png" alt=""> </th>
+                </tr>
+
+                <tr>
+                    <td>lendsqr</td>
+                    <td>Chinazo</td>
+                    <td>sylvia@gmail.com</td>
+                    <td>08024563829</td>
+                    <td>May 31, 2020 10:00am</td>
+                   <td><button class="inactive">Inactive</button></td>
+                </tr>
+
+
+                <tr>
+                    <td>lendsqr</td>
+                    <td>Castro</td>
+                    <td>castro123@gmail.com</td>
+                    <td>07034567820</td>
+                    <td>May 23, 2020 10:00am</td>
+                   <td><button class="pending">Pending</button></td>
+                </tr>
+                <tr>
+                    <td>lendsqr</td>
+                    <td>Tochukwu</td>
+                    <td>tochukwu@gmail.com</td>
+                    <td>08141941900</td>
+                    <td>May 10, 2020 10:00am</td>
+                   <td><button class="blacklisted">Blacklisted</button></td>
+                </tr>
+                <tr>
+                    <td>lendsqr</td>
+                    <td>Chiamaka</td>
+                    <td>cynthia@gmail.com</td>
+                    <td>09123473245</td>
+                    <td>Apr 30, 2020 10:00am</td>
+                    <td><button class="pending">Pending</button></td>
+                </tr>
+                <tr>
+                    <td>lendsqr</td>
+                    <td>Adedeji</td>
+                    <td>adedeji@gmail.com</td>
+                    <td>09126492735</td>
+                    <td>Apr 15, 2020 10:00am</td>
+                    <td><button class="active">Active</button></td>
+                </tr>
+                <tr>
+                    <td>lendsqr</td>
+                    <td>ChukwuEbuka</td>
+                    <td>johnEbuka@gmail.com</td>
+                    <td>07055406789</td>
+                    <td>Apr 2, 2020 10:00am</td>
+                    <td><button class="active">Active</button></td>
+                </tr>
+                <tr>
+                    <td>lendsqr</td>
+                    <td>Chinemerem</td>
+                    <td>kvngChinemerem@gmail.com</td>
+                    <td>08044056785</td>
+                    <td>Mar 15, 2020 10:00am</td>
+                    <td><button class="blacklisted">Blacklisted</button></td>
+                </tr>
+                <tr>
+                    <td>lendsqr</td>
+                    <td>Florence</td>
+                    <td>flora@gmail.com</td>
+                    <td>09056892345</td>
+                    <td>Mar 10, 2020 10:00am</td>
+                    <td><button class="active">Active</button></td>
+                </tr>
+                <tr>
+                    <td>lendsqr</td>
+                    <td>Sunday</td>
+                    <td>papaejima@gmail.com</td>
+                    <td>0912365733</td>
+                    <td>Feb 15, 2020 10:00am</td>
+                    <td><button class="active">Active</button></td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="decade">
+            <label for="decade">Showing</label>
+            <input type="number" name="decade" id="decade" min="0" max="100" step="1" value="100"> <span> out of
+                100</span>
+        </div>
+
+
+
+
+
+</body>
+
+</html>
